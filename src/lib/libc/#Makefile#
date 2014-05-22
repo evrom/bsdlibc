@@ -164,5 +164,5 @@ SHLIB_SHFLAGS+=	-Wl,-z,initfirst
 
 ## commented out conditional
 #.if ${HAVE_LIBGCC} == "no"
-#SHLIB_SHFLAGS+= -Wl,-z,defs
+SHLIB_SHFLAGS+= -Wl,-z,defs
 #.endif
