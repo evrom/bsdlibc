@@ -22,3 +22,8 @@ And download the specific libc module of the CVS tree
 ```cvs checkout -v -A -P src/lib/libc```
 
 This source was checkedout on May 22, 2014
+
+Roadmap
+-------
+
+Make a ```configure``` file for building the source for this NetBSD CVS module
