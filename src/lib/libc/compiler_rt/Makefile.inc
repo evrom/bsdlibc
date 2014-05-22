@@ -30,8 +30,8 @@ GENERIC_SRCS+= atomic.c
 
 ##commented out conditionals
 #.if ${HAVE_LIBGCC_EH} == "no"
-GENERIC_SRCS+= \
-	gcc_personality_v0.c
+#GENERIC_SRCS+= \
+#	gcc_personality_v0.c
 #.endif
 
 .if 0
