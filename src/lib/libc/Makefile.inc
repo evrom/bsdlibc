@@ -26,20 +26,20 @@ USE_SHLIBDIR=	yes
 WARNS=5
 CPPFLAGS+=	-D_LIBC -DLIBC_SCCS -DSYSLIBC_SCCS -D_REENTRANT
 CPPFLAGS+=	-D_DIAGNOSTIC -DMLIBDIR=\"${MLIBDIR}\"
-
-.if (${USE_HESIOD} != "no")
+##commented out conditionals
+#.if (${USE_HESIOD} != "no")
 CPPFLAGS+=	-DHESIOD
-.endif
-
-.if (${USE_INET6} != "no")
+#.endif
+##commented out conditionals
+#.if (${USE_INET6} != "no")
 CPPFLAGS+=	-DINET6
-.endif
+#.endif
 
 CPPFLAGS+=	-DNLS
-
-.if (${USE_YP} != "no")
+##commented out conditionals
+#.if (${USE_YP} != "no")
 CPPFLAGS+=	-DYP
-.endif
+#.endif
 
 # Set lint to exit on warnings
 #LINTFLAGS+=	-w
