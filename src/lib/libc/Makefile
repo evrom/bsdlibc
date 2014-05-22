@@ -78,11 +78,12 @@ CPPFLAGS+=	-D__BUILD_LEGACY
 .include "${.CURDIR}/net/Makefile.inc"
 .include "${.CURDIR}/nameser/Makefile.inc"
 .include "${.CURDIR}/nls/Makefile.inc"
-.if (${USE_LIBTRE} == "yes")
-.include "${NETBSDSRCDIR}/external/bsd/tre/Makefile.inc"
-.else
+##commented out conditional, disables use of libtre for regex
+#.if (${USE_LIBTRE} == "yes")
+#.include "${NETBSDSRCDIR}/external/bsd/tre/Makefile.inc"
+#.else
 .include "${.CURDIR}/regex/Makefile.inc"
-.endif
+#.endif
 .include "${.CURDIR}/resolv/Makefile.inc"
 .include "${.CURDIR}/rpc/Makefile.inc"
 .include "${.CURDIR}/ssp/Makefile.inc"

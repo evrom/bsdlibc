@@ -15,17 +15,20 @@ SRCS+=	base64.c ethers.c gethnamaddr.c getifaddrs.c \
 	rcmd.c recv.c send.c sethostent.c \
 	sockatmark.c
 
-.if (${MKHESIOD} != "no")
+##commented out conditionals
+#.if (${MKHESIOD} != "no")
 SRCS+=	hesiod.c
-.if ${HAVE_GCC:U} == "45" && ${MACHINE_CPU} == "ia64"
-COPTS.hesiod.c+=	${${ACTIVE_CC} == "gcc" :? -O1 :}
-.endif
-.endif
+##commented out conditional and inside conditional
+#.if ${HAVE_GCC:U} == "45" && ${MACHINE_CPU} == "ia64"
+#COPTS.hesiod.c+=	${${ACTIVE_CC} == "gcc" :? -O1 :}
+#.endif
+#.endif
 
 SRCS+=	getaddrinfo.c getnameinfo.c
-.if (${USE_INET6} != "no")
+##commented out conditionals
+#.if (${USE_INET6} != "no")
 SRCS+=	ip6opt.c rthdr.c vars6.c inet6_scopeid.c
-.endif
+#.endif
 SRCS+=	if_indextoname.c if_nameindex.c if_nametoindex.c
 
 LPREFIX=_nsyy
@@ -54,9 +57,10 @@ MAN+=	byteorder.3 ethers.3 gethostbyname.3 getifaddrs.3 \
 	getservent.3 inet.3 inet_net.3 linkaddr.3 \
 	nsdispatch.3 rcmd.3 resolver.3 sockatmark.3
 
-.if (${MKHESIOD} != "no")
+##commented out conditionals
+#.if (${MKHESIOD} != "no")
 MAN+=	hesiod.3
-.endif
+#.endif
 
 MLINKS+=byteorder.3 htonl.3 byteorder.3 htons.3 byteorder.3 ntohl.3 \
 	byteorder.3 ntohs.3
@@ -72,11 +76,12 @@ MLINKS+=getprotoent.3 endprotoent.3 getprotoent.3 getprotobyname.3 \
 	getprotoent.3 getprotobynumber.3 getprotoent.3 setprotoent.3
 MLINKS+=getservent.3 endservent.3 getservent.3 getservbyname.3 \
 	getservent.3 getservbyport.3 getservent.3 setservent.3
-.if (${MKHESIOD} != "no")
+##commented out conditionals
+#.if (${MKHESIOD} != "no")
 MLINKS+=hesiod.3 hesiod_end.3 hesiod.3 hesiod_free_list.3 \
 	hesiod.3 hesiod_init.3 hesiod.3 hesiod_resolve.3 \
 	hesiod.3 hesiod_to_bind.3
-.endif
+#.endif
 MLINKS+=inet.3 addr.3 inet.3 inet_addr.3 inet.3 inet_aton.3 \
 	inet.3 inet_lnaof.3 inet.3 inet_makeaddr.3 inet.3 inet_netof.3 \
 	inet.3 inet_network.3 inet.3 inet_ntoa.3 inet.3 network.3 \
