@@ -28,10 +28,11 @@ COMPILER_RT_ARCH_DIR=	${COMPILER_RT_SRCDIR}/lib/builtins/${LIBC_MACHINE_ARCH}
 GENERIC_SRCS+= atomic.c
 .endif
 
-.if ${HAVE_LIBGCC_EH} == "no"
+##commented out conditionals
+#.if ${HAVE_LIBGCC_EH} == "no"
 GENERIC_SRCS+= \
 	gcc_personality_v0.c
-.endif
+#.endif
 
 .if 0
 # Conflicts with soft-float
