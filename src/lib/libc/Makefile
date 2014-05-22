@@ -100,9 +100,10 @@ CPPFLAGS+=	-D__BUILD_LEGACY
 #.include "${NETBSDSRCDIR}/sys/lib/libunwind/Makefile.inc"
 #.endif
 .include "${.CURDIR}/uuid/Makefile.inc"
-.if (${MKYP} != "no")
+## commented out conditional
+#.if (${MKYP} != "no")
 .include "${.CURDIR}/yp/Makefile.inc"
-.endif
+#.endif
 
 # Remove from SRCS the .c files for any .S files added by the MD makefiles,
 # also remove from SRCS the .c files for the .S and .c files in NO_SRCS.
